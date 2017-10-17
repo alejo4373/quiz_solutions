@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Table template</title>
+</head>
+
+<body>
+    <form action="http://www.example.com/submit.js">
+        <p><strong> Form to Play Dungeons &amp; Dragons</strong></p>
+        <label>User Name: <input type="text" name="username" /></label>
+        <br>
+        <br>
+        <label>Email Address: <input type="email" name="email" /></label>
+        
+        <p>Gender: 
+        <label>Male<input type="radio" name="gender" value="M" />
+        <label>Female<input type="radio" name="gender" value="F" />
+        </p>
+
+        <p>Pick the team you want to belong to:
+        <select name="team">
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+        </select>
+        </p>
+
+    
+        <p>Please pick a safe password:</p>
+        <label>Password: <input type="password" name="password" size="15" maxlength="30" /></label>
+        
+        <p>Do you like videogames
+            <select name="likevideogames">
+                <option value="y">Yes</option>
+                <option value="n">No</option>
+            </select>
+        </p>
+
+        <label>Do you have at least 5 Gigs internet speed conection<input type="checkbox" name="enough-internet-speed" value="y" />Yes</label>
+        <p>Any comments or feedback will be welcomed:
+        <br>
+        <textarea name="comments" cols="20" rows="4"></textarea>
+        <br>
+        <input type="submit" value="Submit"/>
+        </p>
+    </form>
+
+</body>
