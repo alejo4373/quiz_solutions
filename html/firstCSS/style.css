@@ -1,0 +1,20 @@
+body { 
+    background-color: teal;
+    border: 10px outset rgb(160, 30, 30);
+    }
+h1 { 
+    font-family: 'Nosifer', 'monospace';
+    font-size: 40px;
+    color: rgb(160, 30, 30);
+    }
+    
+p {
+    font-family: 'Helvetica';
+    font-size: 25px;
+    color: wheat;
+}
+    
+li {
+    font-family: 'DejaVu Sans Mono';
+    font-size: 20px
+    }
