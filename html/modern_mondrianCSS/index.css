@@ -1,0 +1,125 @@
+body, html {
+    background-color: #f6f6f6;
+}
+#canvas {
+    background-color: #e7e3e2;
+    width: 400px;
+    height: 400px;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 0px #8d8d8d;
+    border: solid black
+}
+/* --TOP ROW COMPONENTS-- */
+#toprow {
+    height: 200px;
+}
+    #topleft_container {
+            width: 180px;
+            height: 200px;  
+        }
+            #topleft_coloredbox {
+                width: 180px;
+                height: 120px;
+                background-color: #22353C
+            }
+
+            #topleft_horizontal_divider {
+                height: 10px;
+            }
+
+    #vertical_divider1 {
+        width: 10px;
+        height: 200px;
+    }
+
+    #emptycontainer {
+        width: 100px;
+        height: 200px;  
+    }
+
+    #vertical_divider2 {
+        width: 10px;
+        height: 200px;
+    }
+
+    #topright_container {
+        width: 100px;
+        height: 200px;
+    }
+
+        #topright_horizonal_divider {
+            margin-top: 150px; /* Margin acting as an empty box */
+            width: 100px;
+            height: 10px;
+        }
+
+        #topright_coloredbox {
+            width: 100px;
+            height: 40px;
+            background-color: #3d272a
+        }
+
+
+/* --END OF TOP ROW COMPONENTS-- */
+
+#middledivider {
+    width: 400px;
+    height: 10px;
+}
+
+/* --BOTTOM ROW COMPONENTS-- */
+
+
+#bottomrow {
+    height: 190px;
+    /* background-color: rgba(0, 255, 34, 0.253); */
+
+}
+    #vertical_divider3 {
+        margin-left: 235px; /*Margin acting as an empty container */
+        width: 10px;
+        height: 190px;
+    }
+
+    #bottomright_coloredbox1 {
+        width: 100px;
+        height: 190px;
+        background-color: rgb(6, 11, 19);
+    }
+
+    #vertical_divider4 {
+        width: 10px;
+        height: 190px;
+    }
+
+    #bottomright_container {
+        width: 45px;
+        height: 190px;
+    }
+
+        #bottom_right_horizontal_divider {
+            margin-top: 150px;
+            width: 45px;
+            height: 10px;
+        }
+        #bottomright_coloredbox2 {
+            width: 45px;
+            height: 30px;
+            background-color: #feda09;
+        } 
+
+/* --END OF BOTTOM ROW COMPONENTS-- */
+
+
+/* -- CLASSES --*/
+.divider {
+    background-color: rgb(57, 57, 57)
+}
+
+.left {
+    float: left; /* So that the elements of these class
+                    instead of going below will float to 
+                    the left */ 
+}
