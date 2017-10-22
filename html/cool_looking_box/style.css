@@ -1,0 +1,27 @@
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+
+p {
+ width: 200px;
+ margin: 0px;
+ font-size: 1.0625rem;    /* font-sizes is 17 pixels => 1rem = 16px in most browsers */
+ line-height: 2.5em;      /* line height is about 42.5px (2.5em * 17px) which is also the height of the p container */
+ color: rgb(255, 0, 0);
+ text-shadow: 1px 0.5px 2px black;
+ background-color: rgb(255, 0, 0);
+ border: 1px rgb(107, 2, 2) solid;
+ border-radius: 6px;
+}
+
+.gradient_background {
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0) );
+}
+
+.shadow {
+  box-shadow: 3px 3px 10px black,
+              inset 1px 1px 1px rgba(255, 255, 255, 0.445),
+              inset -1px -1px 1px rgba(0, 0, 0, 0.507);
+}
