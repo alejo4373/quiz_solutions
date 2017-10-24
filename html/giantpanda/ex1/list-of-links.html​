@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giant Pandas</title>
+    <link rel="stylesheet" href="list-of-links.css">
+</head>
+<body>
+    <h1>Giant Pandas!</h1>
+
+    <ul>
+        <li><a href="http://www.nature.com/nclimate/journal/v3/n3/full/nclimate1727.html">Nature</a></li>
+        <li><a href="https://www.nationalgeographic.com/animals/mammals/g/giant-panda/">National Geographic</a></li>
+        <li><a href="http://botw.fr/shop/en/home/21552-bouee-piscine-panda-kawaii.html">Swimming Pool Pandas</a></li>
+        <li><a href="https://www.reddit.com/r/Panda_Gifs/">Panda Gifs</a></li>
+        <li><a href="http://wwf.panda.org/what_we_do/endangered_species/giant_panda/">Panda.org</a></li>
+    </ul>
+</body>
+</html>
