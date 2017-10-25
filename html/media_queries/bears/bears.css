@@ -1,0 +1,32 @@
+html {
+    font-size: 24px
+}
+
+@media (max-width: 691px) {  /* for viewport less than a 691px */
+     body {
+        width: 30em;
+        padding: 0 30px;        /* creates inner margin */
+        margin: 0 auto;         /* Sets the margin so that its width is auto depending on screen size */
+        text-align: justify;
+    }
+}
+
+@media (min-width: 691px) {  /* for viewport greater than a 691px */
+    body {
+        width: 40em;
+        padding: 0 30px;          /* creates inner margin */
+        margin: 0 auto;           /* Sets the margin so that its width is auto depending on screen size */
+        text-align: justify;        
+    }
+   
+}
+
+img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
