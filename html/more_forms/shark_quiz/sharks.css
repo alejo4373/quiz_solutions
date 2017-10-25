@@ -1,0 +1,56 @@
+html {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Ubuntu', serif;
+    background-color: rgba(87, 81, 81, 0.1);
+}
+
+h1, p, legend{
+    font-family: 'Roboto Slab', serif;
+}
+
+form label{
+    display: inline-block;
+    width: 10em;
+    text-align: left;
+}
+
+form div {
+    margin: 1em;
+}
+
+form input {
+    font-size:  1em;
+    border: 1px solid #DDDDDD;
+    padding: 2px 2px 2px 2px;
+    outline: none;
+}
+
+form input[type="submit"] {
+    display: none;
+}    
+
+form fieldset {
+    margin: 30px;
+}
+
+legend {
+    background-color: #cccccc;
+}
+
+fieldset fieldset legend {
+    text-align: left;
+    background-color: rgb(75,175,80);
+}
+
+form label:hover {
+    text-shadow: 0 0 10px rgb(75,175,80);
+    user-select: text; 
+}
+
+textarea {
+    resize: none;
+    width: 100%
+}
+
+
