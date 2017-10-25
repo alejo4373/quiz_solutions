@@ -1,0 +1,22 @@
+html {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 100%;
+    } 
+}
+
+@media (min-width: 500px) {
+    body {
+        width: 30em;
+    }
+}
+
+#ad {
+    position: fixed;
+    bottom: 0;
+    width: inherit;
+}
