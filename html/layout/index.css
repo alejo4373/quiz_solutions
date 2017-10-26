@@ -2,7 +2,7 @@
 body {
     width: 400px;
     margin: 0 auto;     /* center relative to html tag */
-    padding: 10% 10%;   /* body "center" content */ 
+
 }
 /* end body rule */
 
@@ -21,7 +21,9 @@ body {
     width: 20%;
     text-align: center;
     margin-right: 5px;
-    padding: 7px 4px
+    padding: 7px 4px;
+    border-radius: 4px 4px 0px 0;
+
 }
     
 #case {
@@ -29,6 +31,7 @@ body {
     background-color: #e6e6e6;
     padding: 0 8px; 
     overflow: overlay;      /* so that the container will expand until including the margings of the h2 and last paragraph*/
+    border-top-right-radius: 4px;
 }
     
 #footer {
@@ -36,6 +39,7 @@ body {
     padding-left: 6px;
     padding-top: 6px;
     padding-bottom: 12px;
+    border-radius: 0 0 4px 4px;
 }
     
 #footer ul {
@@ -48,5 +52,20 @@ body {
     display: inline;
 }
 
+/*  Not sure if this was the intent of the bonus
+    adding hover fuctionality with media query? for
+    devices that dont have hover capabilitied(pointer/mouse)? */
 
-    
+/* HOVERING */
+#navigation li:hover {
+    /* background-color: #cccccc; */
+    background-color:#e6e6e6;
+    text-shadow: 0px 0 10px black;
+}
+
+@media (hover:none) {  /* if the divice doesnt have hover capabilities */
+    #navigation li{    /* then present the content with a ligther color */
+        background-color: #afafaf;  /* and black a text shadow  */
+        text-shadow: 0px 0 10px black;
+    }
+}
