@@ -58,7 +58,6 @@ body {
 
 /* HOVERING */
 #navigation li:hover {
-    /* background-color: #cccccc; */
     background-color:#e6e6e6;
     text-shadow: 0px 0 10px black;
 }
