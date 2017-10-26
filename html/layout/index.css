@@ -1,0 +1,52 @@
+/* for centering sake */
+body {
+    width: 400px;
+    margin: 0 auto;     /* center relative to html tag */
+    padding: 10% 10%;   /* body "center" content */ 
+}
+/* end body rule */
+
+#navigation {    /* didn't feel the need to use it */
+}
+
+#navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    
+#navigation li {
+    background-color: #b4afb4;
+    display: inline-block;      /* so that they will stay inline but able to set width (block) */
+    width: 20%;
+    text-align: center;
+    margin-right: 5px;
+    padding: 7px 4px
+}
+    
+#case {
+    margin: 0;
+    background-color: #e6e6e6;
+    padding: 0 8px; 
+    overflow: overlay;      /* so that the container will expand until including the margings of the h2 and last paragraph*/
+}
+    
+#footer {
+    background-color: #b4afb4;
+    padding-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 12px;
+}
+    
+#footer ul {
+   margin: 0;
+   padding: 0;
+    
+}
+    
+#footer  li {
+    display: inline;
+}
+
+
+    
