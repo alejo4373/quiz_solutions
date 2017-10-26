@@ -1,0 +1,46 @@
+body {
+    background-color: rgba(0, 0, 255, 0.3);
+    margin: 0;
+}
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#black3 {
+    width: 600px;
+    z-index: 0
+}
+
+#red2 {
+    width: 500px;
+    z-index: 1;
+}
+
+#black2 {
+    width: 400px;
+    z-index: 2;
+}
+
+#green1 {
+    width: 300px;
+    z-index: 3;
+}
+
+#black1 {
+    width: 200px;
+    z-index: 4;
+}
+
+#red1 {
+    width: 100px;
+    z-index: 5;
+}
+
+.red-circle {
+    opacity: 0.5;
+}
