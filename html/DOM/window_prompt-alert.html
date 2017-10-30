@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Alejandro Franco</title>
+    <!-- <link href="index.css" rel="stylesheet" type="text/css" /> -->
+</head>
+
+<body>
+    <h id="youTyped">You Typed:</h>
+    <p>This is a paragraph<p>
+            <script>
+                
+                    let input = window.prompt("Type a something");
+                    let newText = document.getElementById("youTyped").innerText + " " + input;
+                    document.getElementById("youTyped").innerText = newText;
+                    console.log(document.getElementById("youTyped"));
+                    
+            </script>
+</body>
+
+</html>
