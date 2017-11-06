@@ -1,5 +1,5 @@
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-var operators = ['+', '-', '*', '/', "=", "."];
+var operators = ['+', '-', '*', '/', "."];
 
 /**
  * @function calculate
@@ -14,6 +14,7 @@ function calculate(mathExp) {
   }
 }
 
+//New utilitarian function
 function checkKeyKind(target) {
   elementText = target.innerText;
   if (operators.includes(elementText)) { return "oper" }
@@ -40,27 +41,31 @@ document.addEventListener('DOMContentLoaded', function () {
     var currentKey = checkKeyKind(event.target);
 
     //Check that we have clicked a valid key (is either a num or an operator)
+    //and that whatever we have is outputDiv is no more than 6 char long
     if ((currentKey === "num" || currentKey === "oper") && outputDiv.innerText.length < 6) {
-      //check that keyContent is a character and that the lastChar is not an operator
+      
+      //If we receive and operator check that the last char was not and operator as well
       if (currentKey === "oper" && !operators.includes(lastChar)) {
         outputDiv.innerText += keyContent;
         withResult = false;
       }
+
       else if (currentKey === "num") {
-        if (!withResult) {
-          outputDiv.innerText += keyContent
-          withResult = false;
-          console.log("hello")
-        } //If we have a result and the user presses a num then delete
+        //If we have a result and the user presses a num then
         //reset outputDiv and put whatever num was pressed
-        else if (withResult) {
+        if (withResult) {
           outputDiv.innerText = "";
           outputDiv.innerText += keyContent;
+          withResult = false;
+        } 
+        //if we dont have a result yet
+        else {
+          outputDiv.innerText += keyContent
           withResult = false;
         }
       }
     }
-    
+
     else if (keyContent === "=" && outputDiv.innerText.length > 0) {
       //if last character is an operator then remove it from outputDiv.innerText
       if (operators.includes(lastChar)) {
@@ -84,6 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     else if(keyContent === "%" && outputDiv.innerText.length > 0 ){
       outputDiv.innerText = calculate(outputDiv.innerText) / 100;
+      withResult = true;
+    }
+
+    else if(keyContent === "⇦" && !withResult){
+      outputDiv.innerText = outputDiv.innerText.slice(0, -1);
     }
 
   })

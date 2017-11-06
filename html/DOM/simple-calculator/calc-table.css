@@ -30,6 +30,7 @@ td {
     text-align: center;
     width: 25%;
     cursor: crosshair;
+    border :1px solid black;
 }
 
 
@@ -44,4 +45,12 @@ td {
 
 .firstrow {
     background-color: #C1C1C1
+}
+
+/*  When you click
+    you get the effect that youre 
+    really pressing something */
+td:active{
+    box-shadow: inset 0 0 5px #000000;
+    font-size: 0.95em;
 }
