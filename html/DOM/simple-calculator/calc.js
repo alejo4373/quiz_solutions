@@ -14,46 +14,78 @@ function calculate(mathExp) {
   }
 }
 
+function checkKeyKind(target) {
+  elementText = target.innerText;
+  if (operators.includes(elementText)) { return "oper" }
+  if (numbers.includes(elementText)) { return "num" }
+  return "unknown";
+}
+
+function togglePosNeg(display) {
+  if (display.innerText[0] !== "-") {
+    display.innerText = "-" + display.innerText;
+  } else {
+    display.innerText = display.innerText.slice(1);
+  }
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
   var outputDiv = document.getElementById('output');
   var withResult = false;
 
   document.addEventListener('click', function (event) {
-    var elementText = event.target.innerText;
+    var keyContent = event.target.innerText;
     var lastChar = outputDiv.innerText[outputDiv.innerText.length - 1]
+    var currentKey = checkKeyKind(event.target);
 
     //Check that we have clicked a valid key (is either a num or an operator)
-    if ((operators.includes(elementText) || numbers.includes(elementText)) && outputDiv.innerText.length < 6) {
-      if (elementText === "=" && outputDiv.innerText.length > 0) {
-        //if last character is an operator then remove it from outputDiv.innerText
-        if (operators.includes(lastChar)) {
-          outputDiv.innerText = outputDiv.innerText.slice(0, -1);
-        }
-        var result = calculate(outputDiv.innerText);
-        outputDiv.innerText = result;
-        console.log(outputDiv.innerText);
-        withResult = true;
-
+    if ((currentKey === "num" || currentKey === "oper") && outputDiv.innerText.length < 6) {
+      //check that keyContent is a character and that the lastChar is not an operator
+      if (currentKey === "oper" && !operators.includes(lastChar)) {
+        outputDiv.innerText += keyContent;
+        withResult = false;
       }
-      //check that elementText is a character and that the lastChar is not an operator
-      else if (operators.includes(elementText) && !operators.includes(lastChar)) {
-        outputDiv.innerText += elementText;
-        withResult = false;
-
-      } else if (numbers.includes(elementText) && !withResult) {
-        outputDiv.innerText += elementText
-        withResult = false;
-        console.log("hello")
-
+      else if (currentKey === "num") {
+        if (!withResult) {
+          outputDiv.innerText += keyContent
+          withResult = false;
+          console.log("hello")
+        } //If we have a result and the user presses a num then delete
+        //reset outputDiv and put whatever num was pressed
+        else if (withResult) {
+          outputDiv.innerText = "";
+          outputDiv.innerText += keyContent;
+          withResult = false;
+        }
       }
     }
+    
+    else if (keyContent === "=" && outputDiv.innerText.length > 0) {
+      //if last character is an operator then remove it from outputDiv.innerText
+      if (operators.includes(lastChar)) {
+        outputDiv.innerText = outputDiv.innerText.slice(0, -1);
+      }
+      var result = calculate(outputDiv.innerText);
+      outputDiv.innerText = result;
+      console.log(outputDiv.innerText);
+      withResult = true;
 
-    else if (elementText === "C") {
+    }
+
+    else if (keyContent === "C") {
       outputDiv.innerText = "";
       withResult = false;
     }
-  })
 
+    else if (keyContent === "+/-") {
+      togglePosNeg(outputDiv);
+    }
+
+    else if(keyContent === "%" && outputDiv.innerText.length > 0 ){
+      outputDiv.innerText = calculate(outputDiv.innerText) / 100;
+    }
+
+  })
 
 })
